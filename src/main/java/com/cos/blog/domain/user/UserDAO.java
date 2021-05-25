@@ -28,7 +28,7 @@ public class UserDAO {
 			return -1;
 		}
 		//post
-		public int deleteById() {
+		public int deleteById(int id) {
 			return -1;
 		}
 }
