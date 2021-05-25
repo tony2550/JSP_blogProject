@@ -21,7 +21,7 @@ public class BoardDAO {
 		return null;
 	}
 	//post
-	public int save() { // 모든 파라메터 받으면 힘들잖아 오브젝트로 받아라
+	public int save(Board board) { // 모든 파라메터 받으면 힘들잖아 오브젝트로 받아라
 		return -1;
 	}
 	//post
@@ -29,7 +29,7 @@ public class BoardDAO {
 		return -1;
 	}
 	//post
-	public int deleteById() {
+	public int deleteById(int id) {
 		return -1;
 	}
 }
