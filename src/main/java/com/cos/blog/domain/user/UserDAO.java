@@ -20,7 +20,7 @@ public class UserDAO {
 			return null;
 		}
 		//post
-		public int save() { // 모든 파라메터 받으면 힘들잖아 오브젝트로 받아라
+		public int save(User user) { // 모든 파라메터 받으면 힘들잖아 오브젝트로 받아라
 			return -1;
 		}
 		//post

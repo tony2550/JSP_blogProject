@@ -27,7 +27,11 @@ public class BoardController extends HttpServlet {
 		}
 		
 		String cmd = request.getParameter("cmd");
+		router(cmd);
 		
+	}
+	
+	private void router(String cmd) {
 		// http://localhost:8070/blog/board?cmd=list
 		if(cmd.equals("list")) {
 			
