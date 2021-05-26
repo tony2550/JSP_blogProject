@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.cos.blog.service.Action;
+import com.cos.blog.service.board.ListAction;
+
 // http://localhost:8070/blog/board
 @WebServlet("/board")
 public class BoardController extends HttpServlet {
@@ -27,14 +30,16 @@ public class BoardController extends HttpServlet {
 		}
 		
 		String cmd = request.getParameter("cmd");
-		router(cmd);
-		
+		Action action = router(cmd);
+		if(action != null) {
+			action.execute(request, response);
+		}
 	}
 	
-	private void router(String cmd) {
+	private Action router(String cmd) {
 		// http://localhost:8070/blog/board?cmd=list
 		if(cmd.equals("list")) {
-			
+			return new ListAction();
 		} else if(cmd.equals("detail")) {
 			
 		} else if(cmd.equals("delete")) {
@@ -48,5 +53,6 @@ public class BoardController extends HttpServlet {
 		} else if(cmd.equals("save")) {
 			
 		}
+		return null;
 	}
 }
