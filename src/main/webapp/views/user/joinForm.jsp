@@ -3,7 +3,7 @@
 
 <div class="container">
 
-	<form action="${cp}/user/cmd?join" method="post">
+	<form action="${cp}/user?cmd=join" method="post">
 		<div class="form-group">
 			<input type="text" class="form-control" placeholder="Enter username"  name="username" required="required"/>
 		</div>

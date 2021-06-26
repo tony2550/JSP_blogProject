@@ -38,6 +38,7 @@ public class BoardController extends HttpServlet {
 	
 	private Action router(String cmd) {
 		// http://localhost:8070/blog/board?cmd=list
+		// http://localhost:8070/blog => index.jsp
 		if(cmd.equals("list")) {
 			return new ListAction();
 		} else if(cmd.equals("detail")) {
